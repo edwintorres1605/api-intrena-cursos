@@ -54,7 +54,7 @@ public class AgendaController {
 		agendaEnBd.setFechaFincrea(agenda.getFechaFincrea());
 		agendaEnBd.setFechaIniact(agenda.getFechaIniact());
 		agendaEnBd.setFechaFinact(agenda.getFechaFinact());
-		agendaEnBd.setAreaId(agenda.getAreaId());
+		agendaEnBd.setArea(agenda.getArea());
 		agendaEnBd.setEstado(agenda.getEstado());
 
 		agendaService.save(agendaEnBd);

@@ -37,10 +37,9 @@ public class Agenda {
 	@Column (name = "fecha_finACT")
 	private Date fechaFinact;
 
-	//@ManyToOne
-	//@Join
-	@Column (name = "area_id")
-	private Integer areaId;
+	@ManyToOne
+	@JoinColumn (name = "area_id")
+	private Area area;
 
 	@Column (name = "estado")
 	private String estado;
@@ -93,12 +92,12 @@ public class Agenda {
 		this.fechaFinact = fechaFinact;
 	}
 
-	public Integer getAreaId() {
-		return areaId;
+	public Area getArea() {
+		return area;
 	}
 
-	public void setAreaId(Integer areaId) {
-		this.areaId = areaId;
+	public void setArea(Area area) {
+		this.area = area;
 	}
 
 	public String getEstado() {
@@ -112,7 +111,7 @@ public class Agenda {
 	@Override
 	public String toString() {
 		return "Agenda [id=" + id + ", curso=" + curso + ", fechaInicrea=" + fechaInicrea + ", fechaFincrea="
-				+ fechaFincrea + ", fechaIniact=" + fechaIniact + ", fechaFinact=" + fechaFinact + ", areaId=" + areaId
+				+ fechaFincrea + ", fechaIniact=" + fechaIniact + ", fechaFinact=" + fechaFinact + ", area=" + area
 				+ ", estado=" + estado + "]";
 	}
 }
