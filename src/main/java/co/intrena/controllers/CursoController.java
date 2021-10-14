@@ -4,6 +4,7 @@ import java.util.Optional;
 
 //Aqui se crean lo métodos
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,7 @@ import co.intrena.model.services.CursoService;
 @RestController
 //le indico como vienen las peticiones:
 @RequestMapping("/api/cursos")
-
+@CrossOrigin("*")
 public class CursoController {
 	@Autowired
 	private CursoService cursoService;
