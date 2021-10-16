@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.intrena.model.entity.Usuario;
@@ -20,7 +21,7 @@ import co.intrena.security.JWTUtil;
 
 @RestController
 @RequestMapping("/api/usuarios")
-@CrossOrigin("*")
+@CrossOrigin(origins="*",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;

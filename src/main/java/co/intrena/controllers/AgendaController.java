@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import co.intrena.model.entity.Agenda;
 import co.intrena.model.services.AgendaService;
 
 @RestController
 @RequestMapping("/api/agenda")
-@CrossOrigin("*")
+@CrossOrigin(origins="*",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class AgendaController {
 
 

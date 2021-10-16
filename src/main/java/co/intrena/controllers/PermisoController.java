@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.intrena.model.entity.Permiso;
@@ -20,7 +21,7 @@ import co.intrena.model.services.PermisoService;
 
 @RestController
 @RequestMapping("/api/permisos")
-@CrossOrigin("*")
+@CrossOrigin(origins="*",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class PermisoController {
 	@Autowired
 	private PermisoService permisoService;
