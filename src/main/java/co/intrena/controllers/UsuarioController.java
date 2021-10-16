@@ -43,7 +43,7 @@ public class UsuarioController {
 		return usuarioService.save(usuario);
 	}	
 	
-	@PutMapping
+	@PutMapping ("/actualizar/{id}")
 	public Usuario actualizar(@RequestBody Usuario usuario) {
 		
 		Usuario usuarioEnBD= usuarioService.findById(usuario.getId()).get();
